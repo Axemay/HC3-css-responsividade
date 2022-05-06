@@ -7,9 +7,10 @@
     <script src="https://kit.fontawesome.com/140a4b24c2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript" src="script.js"></script>
     <title>Maiara Machado</title>
 </head>
 <body>
@@ -36,22 +37,23 @@
                 <h5>Front-End Developer</h5>
             </div>
            
-            <div id="arrow">
-                <i class="fa-solid fa-caret-down"></i>
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-caret-down"></i>
             </div>
-            <div id="about">
-                <p>Em busca de conhecimento para iniciar na carreira de desenvolvimento Front-End. Depois de atuar 10 anos com desenho intrucional, ajudando o outro no processo de aprendizado, agora utilizo minha experiência e conhecimento na área da educação para encontrar maneiras mais eficazes de construir o meu próprio aprendizado.</p>
+            <div style="display:none" id="about">
+                <p>Em busca de conhecimento para iniciar na carreira de desenvolvimento Front-End. Depois de atuar 10 anos com desenho instrucional, ajudando o outro no processo de aprendizado, agora utilizo minha experiência e conhecimento na área da educação para encontrar maneiras mais eficazes de construir o meu próprio aprendizado.</p>
             </div>
             <div class="form">
                 <p>Deixe seu contato!</p>
                 <form action="">
-                    <input type="email" placeholder="seu melhor email">
-                    <button>Enviar</button>
+                    <input type="email" placeholder="seu melhor email"><button>Enviar</button>
                 </form>
 
             </div>
         </section>
 
     </main>
+
 </body>
+<footer class="footer"></footer>
 </html>

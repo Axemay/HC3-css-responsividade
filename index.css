@@ -7,8 +7,27 @@
 }
 
 body {
-    background-image: linear-gradient(90deg, #370533, #4e0056, #5f0081, #6400b3, #5212eb);
+    background-image: linear-gradient(90deg, #370533, #4e0056, #5f0081, #6400b3, #5212eb) ;
+    
+}
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #692764;
+    margin-bottom: 100px;
+    border-bottom: 5px solid #370533; 
+
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li{
+    padding: 10px;
 }
 
 header img {
@@ -24,6 +43,13 @@ ul {
 
 a {
     text-decoration: none;
+    transition: 900ms;
+
+}
+
+
+a:hover{
+    font-weight: bold;
 }
 
 .container {
@@ -32,10 +58,37 @@ a {
 
 .container .name h1{
     font-size: 50px;
+
 }
 
 .container .name h5{
     font-size: 25px;
+
+}
+
+#arrow {
+    font-size: 30px;
+    cursor: pointer;
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink {
+    to{
+        visibility: hidden;
+    } 
+}
+
+#animation{
+    transition: 300ms;
+}
+
+.rotate {
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+
+.active {
+    display: block !important;
 }
 
 #about p{
@@ -45,19 +98,100 @@ a {
 }
 
 form {
-    width: 40%;
+    width: 40%;  
     margin: 0 auto;
+    margin-top: 10px;
     
 }
 
 .form input{
-    width: 50%;
+    width: 70%;
+    height: 35px;
+    border-color: #000000;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    border-right: transparent;
+    margin-right: 0;
+    padding-right: 0;
+    color: #000000;
+
 }
 
 .form button {
     width: 15%;
+    height: 35px;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-left: transparent;
+    padding-left: 0;
+    margin-left: 0;
+
 }
 
+.form p {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+
 button{
-    color: #000;
+
+    background: linear-gradient(to right, #5212eb  50%, #370533 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 600ms ease-out;
+}
+
+button:hover{
+    cursor: pointer;
+    transform: scale(1.03);
+    background-position: left bottom;
+    
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20px; 
+    background-color: #370533;
+}
+
+@media only screen and (max-width:768px){
+    .form{
+        width: 100%;
+        
+    }
+
+    .form input{
+        width: 100%;
+        border-radius: 6px;
+    }
+
+
+    .form button{
+        margin-top: 10px;
+        width: 40%;
+        border-radius: 6px;
+
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    .container .name h1{
+        font-size: 24px;
+    }
+    .container .name h5{
+        font-size: 16px;
+    }
+    
+    #about p{
+        font-size: 14px;
+        max-width: 80%;
+        text-align: justify;
+
+        
+    }
 }
